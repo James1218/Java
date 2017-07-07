@@ -38,6 +38,12 @@ public class CH4_LocalDate {
 		
 		//withXXX
 		System.out.println(localDate.withDayOfMonth(30));
+		
+		//atTime
+		System.out.println(localDate.atTime(16,30));
+		
+		//toEpochDay
+		System.out.println(localDate.toEpochDay());
 	}
 
 }
