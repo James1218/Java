@@ -1,3 +1,4 @@
+package oca;
 //package ch2_associate;
 //
 //public class CH2_PrimitiveType {

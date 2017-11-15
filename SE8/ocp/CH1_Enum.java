@@ -1,6 +1,6 @@
-package professional_ch1;
+package ocp;
 
-public class TestEnum {
+public class CH1_Enum {
 
 	public static void main(String[] args) {
 

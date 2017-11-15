@@ -1,4 +1,4 @@
-package professional_ch4;
+package ocp;
 
 import java.util.Arrays;
 import java.util.HashSet;
@@ -14,7 +14,7 @@ import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
-public class testStream {
+public class CH4_Stream {
 
 	public static void main(String[] args) {
 		Stream<Integer> streamInteger = Stream.of(1, 2, 3);

@@ -1,4 +1,4 @@
-package professional_ch3;
+package ocp;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -6,7 +6,7 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 
-public class ComparatorTest {
+public class CH3_Comparator {
 
 	public static void main(String[] args) {
 

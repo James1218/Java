@@ -1,4 +1,4 @@
-package professional_ch5;
+package ocp;
 
 import java.text.NumberFormat;
 import java.text.ParseException;
@@ -8,7 +8,7 @@ import java.time.temporal.ChronoUnit;
 import java.util.Locale;
 import java.util.ResourceBundle;
 
-public class TestLocale {
+public class CH5_Locale {
 
 	public static void main(String[] args) throws ParseException {
 

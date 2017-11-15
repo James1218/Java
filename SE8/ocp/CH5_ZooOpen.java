@@ -1,4 +1,4 @@
-package professional_ch5;
+package ocp;
 
 import java.util.List;
 import java.util.Locale;
@@ -10,7 +10,7 @@ import java.util.stream.Stream;
  * @author feng
  *
  */
-public class ZooOpen {
+public class CH5_ZooOpen {
 
 	public static void main(String[] args) {
 

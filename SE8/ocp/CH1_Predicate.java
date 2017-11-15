@@ -1,8 +1,8 @@
-package professional_ch1;
+package ocp;
 
 import java.util.function.Predicate;
 
-public class TestPredicate {
+public class CH1_Predicate {
 
 	public static void main(String[] args) {
 		Panda.main(args);

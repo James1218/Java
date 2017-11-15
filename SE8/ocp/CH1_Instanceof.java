@@ -1,6 +1,6 @@
-package professional_ch1;
+package ocp;
 
-public class TestInstanceof {
+public class CH1_Instanceof {
 
 	public static void main(String[] args) {
 		HeavyAnimal hippo = new Hippo();

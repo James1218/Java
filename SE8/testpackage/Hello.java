@@ -1,4 +1,4 @@
-package anotherpackage;
+package testpackage;
 
 public class Hello {
 	

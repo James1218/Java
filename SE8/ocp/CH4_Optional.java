@@ -1,8 +1,8 @@
-package professional_ch4;
+package ocp;
 
 import java.util.Optional;
 
-public class testOptional {
+public class CH4_Optional {
 
 	public static void main(String[] args) throws Exception {
 		
