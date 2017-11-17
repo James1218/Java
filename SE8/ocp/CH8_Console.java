@@ -36,6 +36,7 @@ public class CH8_Console {
 			 */
 			char[] password = console.readPassword("Enter your password: ");
 			console.format("Enter your password again:  ");
+			console.printf("Enter your password again:  ");
 			console.flush();
 			char[] verify = console.readPassword();
 			boolean match = Arrays.equals(password,verify);

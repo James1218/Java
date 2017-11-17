@@ -68,7 +68,7 @@ public class CH8_IO {
 		
 		
 		//read file using stream
-		//InputStreamReader	Reads character data from an existing InputStream
+		//InputStreamReader	Reads character data from an existing InputStream (convert stream to reader)
 		try(FileInputStream fileInputStream = new FileInputStream(file);
 				BufferedInputStream bufferedInputStream = new BufferedInputStream(fileInputStream);
 				ObjectInputStream objectInputStream = new ObjectInputStream(bufferedInputStream);
