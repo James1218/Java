@@ -43,8 +43,8 @@ public class CH9_JDBC {
 					int id = resultSet.getInt("id");
 					String name = resultSet.getString("name");
 					java.sql.Date sqlDate = resultSet.getDate("date_born");
-					java.util.Date utilDate = sqlDate.toLocalDate();
-					System.out.println(id + " "+name+" "+utilDate);
+					java.time.LocalDate timeDate = sqlDate.toLocalDate();
+					System.out.println(id + " "+name+" "+timeDate);
 				}
 			}
 			
