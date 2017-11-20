@@ -1,6 +1,7 @@
 package ocp;
 
 import java.util.Arrays;
+import java.util.Comparator;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
@@ -28,6 +29,7 @@ public class CH4_Stream {
 		System.out.println(optional.orElse(111));
 		
 		Stream<String> stream = Stream.of("w", "o", "l", "f");
+		//supplier, accumulator, combiner
 		StringBuffer sb = stream.collect(()->new StringBuffer(), (x, y) -> x.append(y), (x, y) -> x.append(y));
 		System.out.println(sb.toString());
 		
@@ -75,6 +77,7 @@ public class CH4_Stream {
 		System.out.println(map2.getClass());  // class. java.util.HashMap
 		
 		ohMy = Stream.of("lions", "tigers", "bears", "A");
+		//toMap(Function k, Function v, BinaryOperator m, Supplier s)
 		TreeMap<Integer, String> treeMap = ohMy.collect(Collectors.toMap(s->s.length(), s->s, (s1, s2)->s1+","+s2, ()->new TreeMap<>()));
 		System.out.println(treeMap);
 		
@@ -85,9 +88,10 @@ public class CH4_Stream {
 		
 		ohMy = Stream.of("lions", "tigers", "bears", "B", "A", "A");
 		Map<Integer, Set<String>> map4 = ohMy.collect(Collectors.groupingBy(x->x.length(), Collectors.toCollection(TreeSet::new)));
-		System.out.println(map4);
+		System.out.println("Collects.groupingBy : "+map4);
 		
 		ohMy = Stream.of("lions", "tigers", "bears", "B", "A", "A");
+		//classifier, mapFactory, downstream
 		map4 = ohMy.collect(Collectors.groupingBy(x->x.length(), ()->new TreeMap<>(), Collectors.toCollection(TreeSet::new)));
 		System.out.println(map4);
 		System.out.println(map4.getClass());
@@ -99,6 +103,12 @@ public class CH4_Stream {
 		ohMy = Stream.of("lions", "tigers", "bears", "B", "A", "A");
 		Map<Integer, Long> map6 = ohMy.collect(Collectors.groupingBy(s->s.length(), Collectors.counting()));
 		System.out.println(map6);
+
+		ohMy = Stream.of("lions", "tigers", "bears");
+		//classifier, downstream
+		Map<Integer, Optional<Character>> map7 = ohMy.collect(
+				Collectors.groupingBy(String::length, Collectors.mapping(s -> s.charAt(0), Collectors.minBy(Comparator.naturalOrder()))));
+		System.out.println(map7); // {5=Optional[b], 6=Optional[t]}
 		
 		Function<String, String> f = String::new;
 	}
