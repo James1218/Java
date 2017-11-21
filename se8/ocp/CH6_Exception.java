@@ -1,6 +1,6 @@
 package ocp;
 
-public class Ch6_Exception {
+public class CH6_Exception {
 
 	public static void main(String[] args) {
 

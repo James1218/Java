@@ -11,7 +11,7 @@ import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.io.Serializable;
 
-public class Ch8_Deserialization {
+public class CH8_Deserialization {
 
 	public static void main(String[] args) {
 		
