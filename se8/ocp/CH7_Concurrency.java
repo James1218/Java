@@ -5,6 +5,7 @@ import java.util.concurrent.ExecutionException;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
+import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.TimeoutException;
 
@@ -77,6 +78,14 @@ public class CH7_Concurrency {
 			else
 				System.out.println("At least one task is still running");
 		}
+		
+		ScheduledExecutorService service = Executors.newSingleThreadScheduledExecutor();
+
+		Runnable task1 = () -> System.out.println("Hello Zoo");
+		Callable<String> task2 = () -> "Monkey";
+
+		Future<?> result1 = service.schedule(task1, 10, TimeUnit.SECONDS);
+		Future<?> result2 = service.schedule(task2, 8, TimeUnit.MINUTES);
 	}
 
 }
