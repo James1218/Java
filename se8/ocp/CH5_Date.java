@@ -7,9 +7,7 @@ import java.time.LocalDateTime;
 import java.time.LocalTime;
 import java.time.Month;
 import java.time.Period;
-import java.time.Year;
 import java.time.ZoneId;
-import java.time.ZoneOffset;
 import java.time.ZonedDateTime;
 import java.time.format.DateTimeFormatter;
 import java.time.format.FormatStyle;
@@ -19,7 +17,7 @@ public class CH5_Date {
 
 	public static void main(String[] args) throws InterruptedException {
 		LocalDate localDate = LocalDate.now();
-		localDate = LocalDate.of(2017, Month.JANUARY, 1);
+		localDate = LocalDate.of(2017, Month.JANUARY, 2);
 		System.out.println("localDate "+localDate);
 		LocalTime localTime = LocalTime.now();
 		localTime = LocalTime.of(1, 2, 3, 4);
@@ -157,6 +155,15 @@ public class CH5_Date {
 		System.out.println(localDateTime.format(dateTimeFormatter));
 		System.out.println();
 		
+		date = LocalDate.parse("2017-11-15");
+		//d: day-of-month 
+		String dateStr = date.format(DateTimeFormatter.ofPattern("MM/dd/yyyy"));
+		System.out.println(dateStr);
+		
+		//D: day-of-year
+		//throw exception because date-of-year is 315 three digits, but the pattern only have 2 digits
+		dateStr = date.format(DateTimeFormatter.ofPattern("MM/DD/yyyy"));
+		System.out.println(dateStr);
 	}
 
 }
