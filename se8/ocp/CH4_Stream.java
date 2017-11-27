@@ -18,6 +18,12 @@ import java.util.stream.Stream;
 public class CH4_Stream {
 
 	public static void main(String[] args) {
+		
+		//convert String to Stream
+		String input = "String";
+		IntStream intStream = input.chars();
+		Stream<Character> charStream = intStream.mapToObj(i->(char)i);
+		
 		Stream<Integer> streamInteger = Stream.of(1, 2, 3);
 		streamInteger = Stream.generate(()->1);
 		streamInteger = Stream.iterate(1, n -> n + 2);
@@ -57,7 +63,7 @@ public class CH4_Stream {
 		Stream<List<String>> animals = Stream.of(zero, one, two);
 		stream = animals.flatMap(list->list.stream());
 		
-		IntStream intStream = IntStream.range(1, 6);
+		intStream = IntStream.range(1, 6);
 		streamInteger = intStream.mapToObj(x->x);
 		streamInteger.forEach((x)->System.out.print(x));
 		System.out.println();
